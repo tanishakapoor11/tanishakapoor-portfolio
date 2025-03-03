@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { Lavishly_Yours, Montserrat, Orbitron } from "next/font/google";
+import { Lavishly_Yours, Montserrat, Orbitron, Ms_Madi, Great_Vibes } from "next/font/google";
 import "./globals.css";
-import Navbar from "./components/Navbar";
 
 const lavishlyYours = Lavishly_Yours({ 
   subsets: ["latin"], 
@@ -10,15 +9,25 @@ const lavishlyYours = Lavishly_Yours({
   variable: "--font-lavishly" 
 });
 
+const greatVibes = Great_Vibes({ 
+  subsets: ["latin"], 
+  weight: "400", 
+  variable: "--font-great-vibes" 
+});
+
+const msMadi = Ms_Madi({ 
+  subsets: ["latin"], 
+  weight: "400", 
+  variable: "--font-ms-madi" 
+});
+
 const montserrat = Montserrat({ 
   subsets: ["latin"], 
-  // weight: ["400", "700"], 
   variable: "--font-montserrat" 
 });
 
 const orbitron = Orbitron({ 
   subsets: ["latin"], 
-  // weight: ["400", "700"], 
   variable: "--font-orbitron" 
 });
 const geistSans = Geist({
@@ -44,7 +53,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${lavishlyYours.variable} ${montserrat.variable} ${orbitron.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${lavishlyYours.variable} ${montserrat.variable} ${orbitron.variable} ${greatVibes.variable} ${msMadi.variable} antialiased`}
       >
         {children}
       </body>
