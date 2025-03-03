@@ -1,7 +1,26 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Lavishly_Yours, Montserrat, Orbitron } from "next/font/google";
 import "./globals.css";
+import Navbar from "./components/Navbar";
 
+const lavishlyYours = Lavishly_Yours({ 
+  subsets: ["latin"], 
+  weight: "400", 
+  variable: "--font-lavishly" 
+});
+
+const montserrat = Montserrat({ 
+  subsets: ["latin"], 
+  // weight: ["400", "700"], 
+  variable: "--font-montserrat" 
+});
+
+const orbitron = Orbitron({ 
+  subsets: ["latin"], 
+  // weight: ["400", "700"], 
+  variable: "--font-orbitron" 
+});
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -25,7 +44,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${lavishlyYours.variable} ${montserrat.variable} ${orbitron.variable} antialiased`}
       >
         {children}
       </body>

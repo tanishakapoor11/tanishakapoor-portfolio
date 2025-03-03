@@ -3,6 +3,9 @@
 @theme {
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-lavishly: var(--font-lavishly);
+  --font-montserrat: var(--font-montserrat);
+  --font-orbitron: var(--font-orbitron);
 }
 
 :root {
